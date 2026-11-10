@@ -1,0 +1,26 @@
+schema_version = "1.4"
+artifacts = ["/app/tinyinfer"]
+
+[task]
+name = "inference-bughunt/all-at-once"
+version = "1.0.0"
+description = "Six bug reports against the same inference stack"
+authors = []
+keywords = ["inference", "debugging", "pytorch", "multi-bug"]
+
+[metadata]
+category = "multi-bug"
+
+[verifier]
+timeout_sec = 600.0
+environment_mode = "separate"
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 1200.0
+os = "linux"
+cpus = 2
+memory_mb = 4096

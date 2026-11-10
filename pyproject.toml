@@ -1,0 +1,14 @@
+[project]
+name = "inference-bughunt"
+version = "0.1.0"
+description = "Seeded-bug tasks for coding agents on a small LLM inference stack, with graders that reject shortcut fixes."
+requires-python = ">=3.11,<3.14"
+dependencies = ["torch>=2.6", "pytest>=8"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

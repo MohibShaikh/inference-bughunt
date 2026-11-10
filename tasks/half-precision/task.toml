@@ -1,0 +1,26 @@
+schema_version = "1.4"
+artifacts = ["/app/tinyinfer"]
+
+[task]
+name = "inference-bughunt/half-precision"
+version = "1.0.0"
+description = "float16 inference returns NaN for some batches"
+authors = []
+keywords = ["inference", "debugging", "pytorch", "numerics"]
+
+[metadata]
+category = "numerics"
+
+[verifier]
+timeout_sec = 600.0
+environment_mode = "separate"
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 1200.0
+os = "linux"
+cpus = 2
+memory_mb = 4096
